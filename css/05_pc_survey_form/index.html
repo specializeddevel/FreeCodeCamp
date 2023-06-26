@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description" class="description text-center">
+        Este es un formulario de encuesta para conocer su opinion, le agradeceremos que lo llene. Gracia!.
+    </p>
+    <div id="form-container">
+    <form action="" id="survey-form">
+        <label for="name" id="name-label">Name: 
+            <input type="text" name="" id="name" required placeholder="ingrese su nombre" class="form-control">
+        </label>
+        <label for="email" id="email-label" class="input-radio">Email: 
+            <input type="email" name="" id="email" required placeholder="ingrese su Email" class="form-control">
+        </label>
+        <label for="number" id="number-label">Number:
+            <input type="number" name="" id="number" min="0" max="120" placeholder="ingrese un numero" class="form-control">
+        </label>
+        <p>Seleccione su sexo:
+        <select name="" id="dropdown" class="input-checkbox">
+            <option value="">(select one)</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select>
+    </p>
+        <p>Seleccione una opcion</p>
+        <label for="personal">
+            <input type="radio" name="account-type" id="personal" value="p" class="input-radio"> Personal
+        </label>
+        <label for="business">
+            <input type="radio" name="account-type" id="business" value="b" class="input-radio"> Business
+        </label>
+        <p>Seleccione las opciones que correspondan</p>
+        <label for="term1">
+            <input id="term1" type="checkbox"  name="terms" value="1"  class="input-checkbox"/> Option 1
+        </label>
+        <label for="term2">
+            <input id="term2" type="checkbox"  name="terms" value="2" class="input-checkbox"/> Option 2
+        </label>
+        <label for="term3">
+            <input id="term3" type="checkbox"  name="terms" value="3" class="input-checkbox"/> Option 3
+        </label>
+        <label for="comments">Comentarios: <br>
+            <textarea id="comments" cols="30" rows="3" /></textarea>
+        </label>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    </div>
+</body>
+</html>

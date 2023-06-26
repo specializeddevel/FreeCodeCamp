@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    height: 100vh;
+    /*quita la barra de despalzamiento inferior*/
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;  
+    /*elimina relleno izquierdo y derecho y establece el superior e inferior en 2rem*/  
+    padding: 2rem 0;    
+    border-bottom: 3px solid #3b3b4f;
+}
+
+/*seleccionando el ultimo fieldset mediante la pseudo-clase last-of-type*/
+fieldset:last-of-type{
+    border-bottom: none;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin: 10px 0 0 0;
+    min-height: 2em;
+}
+
+.inline {
+    /*Esto eliminará la regla anterior que establece que todos los input tengan un width: 100%*/
+    width: unset;
+    /*
+    margin-right: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    o puede ser:*/
+    /*establece el margen derecho en 0.5 y los demas en 0*/
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    
+}
+
+/*Para dar estilo al botón de envío,
+puede utilizar un selector de atributos (attribute),
+que selecciona un elemento basado en el valor del atributo dado.
+Aquí hay un ejemplo: input[name="password"]
+Lo anterior selecciona los elementos input con un atributo name con el valor password.*/
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    min-width: 300px;    
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;    
+}
+
+input[type="file"] {
+    background-color: #0a0a23;
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
+}

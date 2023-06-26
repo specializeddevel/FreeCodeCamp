@@ -1,0 +1,214 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    /*el limite son los bordes de la caja, las dimenciones del objeto no crecen al hacer paddin o border
+    box-sizing: border-box;
+}*/
+
+/*Al hacer clic en los enlaces de navegación,
+la ventana gráfica debería saltar a la sección correspondiente. Sin embargo,
+este salto puede desorientar a algunos usuarios. Selecciona todos los elementos y establece el scroll-behavior a smooth.*/
+@media (prefers-reduced-motion: no-preference){
+* {
+    scroll-behavior: smooth;
+}
+}
+
+body {
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+#logo{
+    width: max(100px,18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35/4;
+    padding: 0.4rem;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    /*Ordena el header,
+        usando Flexbox para colocar espacio entre los hijos y centrarlos verticalmente. Luego,
+        fija el header en la parte superior de la ventana gráfica.*/
+    
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+main{
+    padding-top: 40px;
+}
+
+h1{
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+}
+
+
+/*"nav > ul": Este selector selecciona todos los elementos <ul>que son hijos directos de un elemento <nav>. El signo ">" indica la relación
+ de padre a hijo directo en la estructura HTML. En otras palabras, solo seleccionará elementos <ul>que sean descendientes directos de un 
+ elemento <nav>y no elementos <ul>que estén más anidados dentro de otros elementos.*/
+nav>ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav > ul > li {
+    
+            display: flex;
+            justify-content: space-evenly;
+            color: #dfdfe2;
+            margin: 0 0.2rem;
+            padding: 0.2rem;
+            display: block;
+    
+}
+
+li > a {
+    color: #dfdfe2;
+    text-decoration: none;
+}
+
+nav > ul > li:hover {
+    
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
+}
+
+
+/*El texto .sr-only todavía es visible. Hay un patrón común para ocultar texto visualmente para que sólo 
+los lectores de pantalla lean. Este patrón es establecer las siguientes propiedades de CSS:*/
+.sr-only {
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+}
+
+/*nav>ul": Este selector selecciona todos los elementos <ul> que son hijos directos de un elemento <nav>. El signo ">" indica la relación
+de padre a hijo directo en la estructura HTML. En otras palabras, solo seleccionará elementos <ul> que sean descendientes directos de
+un elemento <nav> y no elementos <ul> que estén más anidados dentro de otros elementos.*/
+section > div > p::before{
+    content: "Question #";
+}
+
+section {
+    width: 80%;
+    margin: 0 auto 10px auto;    
+    max-width: 600px;
+}
+
+.info { 
+    padding: 10px 0 0 5px;
+}
+
+.formrow{
+    margin-top: 1px;
+    padding: 0 1px;
+}
+
+input{
+    font-size: 13px;
+}
+
+.info > input {
+    width: 50%;
+    text-align: left;
+}
+
+.info > label {
+    
+    width: 20%;
+    min-width: 55px;
+    text-align: left;
+    
+}
+
+.info > label, .info > input{
+    display: inline-block;
+}
+
+.question-block{
+    text-align: left;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 5px;
+}
+
+p{
+    margin-top: 5px;
+        padding-left: 15px;
+        font-size: 20px;
+}
+
+
+/*Es útil ver el borde por defecto alrededor de los elementos fieldset,
+durante el desarrollo. Sin embargo,
+puede que no sea el estilo que quieras. Elimina el borde y el relleno inferior de los elementos .question.*/
+.question {
+    border: none;
+    padding: 0;
+}
+
+/*Elimina el estilo predeterminado para los elementos de la lista .answers-list,
+y elimina el relleno de la lista desordenada.*/
+.answers-list{
+    list-style: none;
+    padding: 0;
+}
+
+/*configura el boton*/
+button{
+    display: block;
+        margin: 40px auto;
+        width: 40%;
+        padding: 15px;
+        font-size: 23px;
+        background: #d0d0d5;
+        border: 3px solid #3b3b4f;
+}
+
+footer{
+    background-color: #2a2a40;
+    display: flex ;
+    justify-content: center ;
+}
+
+footer, footer  a{
+    color: #dfdfe2;
+}
+
+.student-info label {
+   padding-right: 10px;
+   min-width: auto;
+}
+
